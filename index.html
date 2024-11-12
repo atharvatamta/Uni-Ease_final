@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniEase Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap');
+    body {
+      font-family: 'Satoshi', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-t from-gray-900 to-black text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-black absolute w-full top-0 left-0 z-50">
+    <div class="max-w-7xl  px-6 sm:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <button class="text-white inline-flex items-center justify-center p-2 rounded-md hover:text-gray-300 hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white" aria-label="Main menu">
+            <svg class="block h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <a href="#" class=" text-4xl font-bold text-gray-300">UE</a>
+        </div>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">Home</a>
+            <a href="#about" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">About</a>
+            <a href="#contact" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">Contact Us</a>
+            
+          </div>
+        </div>
+         <!-- Search Bar -->
+         <div class="flex items-center space-x-2">
+            <input type="text" placeholder="     search..." class="p-2 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-gray-500">
+            <button class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+              Search
+            </button>
+          </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="relative w-full h-screen bg-gradient-to-t from-gray-900 to-black text-white">
+    <div class="absolute inset-0 bg-cover bg-center"></div>
+    <div class="relative z-10 flex flex-col justify-center items-center w-full h-full text-center">
+      <h1 class="text-5xl font-semibold text-white">UniEase</h1>
+      <p class="text-2xl mt-2">Your Campus Essentials, Simplified!</p>
+      <a href="#cards" class="mt-8 inline-block bg-gray-800 text-lg py-3 px-6 rounded-full hover:bg-gray-700 transition-all duration-300">Learn More →</a>
+    </div>
+  </header>
+
+  <!-- Cards Section -->
+  <section id="cards" class="py-16  text-white">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-semibold">Our Features</h2>
+      <p class="text-lg mt-2">Explore the core features of UniEase that help make your campus life easier!</p>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+      <!-- Card 1 -->
+      <div class="relative rounded-lg overflow-hidden bg-cover bg-center h-80 hover:scale-105 transition-all duration-300" style="background-image: url('assets/img2.jpeg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h3 class="text-3xl text-white">Placement and Internship</h3>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="academic-card relative rounded-lg overflow-hidden bg-cover bg-center h-80 hover:scale-105 transition-all duration-300" style="background-image: url('assets/img1.jpeg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h3 class="text-3xl  text-white">Academic Resources</h3>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative rounded-lg overflow-hidden bg-cover bg-center h-80 hover:scale-105 transition-all duration-300" style="background-image: url('assets/img3.jpeg');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h3 class="text-3xl  text-white">Campus Tools</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 py-6 text-center text-white">
+    <p>&copy; 2024 UniEase. All Rights Reserved.</p>
+    <div class="mt-4 space-x-6">
+      <a href="#" class="hover:text-gray-400">Home</a>
+      <a href="#" class="hover:text-gray-400">About</a>
+      <a href="#" class="hover:text-gray-400">Contact Us</a>
+      <a href="#" class="hover:text-gray-400">Search</a>
+    </div>
+  </footer>
+ 
+  <script src="script.js"></script>
+</body>
+</html>

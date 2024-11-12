@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Resources - UniEase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome icons -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap');
+    body {
+      font-family: 'Satoshi', Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <nav class="bg-black fixed w-full top-0 left-0 z-50">
+    <div class="max-w-7xl px-6 sm:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <a href="index.html" class="text-4xl font-bold text-gray-300">UE</a>
+        </div>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-4">
+            <a href="index.html" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">Home</a>
+            <a href="#about" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">About</a>
+            <a href="#contact" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">Contact Us</a>
+           </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex items-center space-x-2">
+           <input type="text" placeholder="     search..." class="p-2 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-gray-500">
+           <button class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+             Search
+           </button>
+         </div>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- Academic Resources Page -->
+  <section class="pt-24 pb-16 bg-gradient-to-t from-gray-900 to-black text-white h-screen">
+    <div class="text-center mt-20">
+      <h2 class="text-4xl font-semibold">Select Your Year of Study</h2>
+      <p class="text-lg mt-5 mb-12">Choose the year you're in to access specific academic resources tailored to your needs.</p>
+    </div>
+
+    <div class="max-w-7xl mx-auto  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+      <!-- 1st Year Card -->
+      <a href="#" class="relative rounded-lg overflow-hidden bg-gray-800 p-12 hover:scale-105 transition-all duration-300">
+        <div class="flex items-center justify-center mb-4">
+          <i class="fas fa-graduation-cap text-4xl text-yellow-400"></i>
+        </div>
+        <h3 class="text-3xl font-semibold text-center">1st Year</h3>
+         </a>
+
+      <!-- 2nd Year Card -->
+      <a href="#" class="relative rounded-lg overflow-hidden bg-gray-800 p-12  hover:scale-105 transition-all duration-300">
+        <div class="flex items-center justify-center mb-4">
+          <i class="fas fa-book-open text-4xl text-blue-400"></i>
+        </div>
+        <h3 class="text-3xl font-semibold text-center">2nd Year</h3>
+         </a>
+
+      <!-- 3rd Year Card -->
+      <a href="#" class="relative rounded-lg overflow-hidden bg-gray-800 p-12  hover:scale-105 transition-all duration-300">
+        <div class="flex items-center justify-center mb-4">
+          <i class="fas fa-cogs text-4xl text-green-400"></i>
+        </div>
+        <h3 class="text-3xl font-semibold text-center">3rd Year</h3>
+       </a>
+
+      <!-- 4th Year Card -->
+      <a href="#" class="relative rounded-lg overflow-hidden bg-gray-800 p-8  hover:scale-105 transition-all duration-300">
+        <div class="flex items-center justify-center mb-4">
+          <i class="fas fa-clipboard-check text-4xl text-red-400"></i>
+        </div>
+        <h3 class="text-3xl font-semibold text-center">4th Year</h3>
+       </a>
+    </div>
+  </section>
+
+</body>
+</html>
