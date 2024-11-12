@@ -93,8 +93,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Team
 - Atharva Tamta
-- Akshara Agarwal
 - Akshat Pawar
+- Akshara Agarwal
 - Yogita Das
 
 Developed by the UniEase Team, aimed at making university life simpler and more accessible for students everywhere.
