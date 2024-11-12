@@ -26,10 +26,10 @@ UniEase is a comprehensive platform designed to streamline university life by of
 
 ## Tech Stack 💻
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** [Specify backend framework if applicable, e.g., Node.js, Django]
-- **Database:** [Specify database, e.g., MySQL, MongoDB]
-- **Other Technologies:** [Specify any other technologies, libraries, or tools used]
+- **Frontend:** HTML, CSS(tailwind), JavaScript
+- **Backend:**  Node.js, Django
+- **Database:** MySQL, MongoDB
+- **Other Technologies:**
 
 ## Installation ⚙️
 
@@ -37,7 +37,7 @@ To run UniEase locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/UniEase.git
+   git clone https://github.com/atharvatamta/UniEase.git
    cd UniEase
    ```
 
