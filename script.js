@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click event listener
     academicCard.addEventListener('click', function() {
       // Open the new page in a new tab
-      window.open('academic-resources.html', '_blank'); // Replace with your actual page URL
+      window.location.href = 'academic-resources.html';
     });
   });
   
