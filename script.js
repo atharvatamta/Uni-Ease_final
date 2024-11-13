@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Get the Academic Resources card element
   const academicCard = document.querySelector('.academic-card');
+
   const campusToolsCard = document.querySelector('.campustools-card');
   const internshipCard = document.querySelector('.internship-card');
 
