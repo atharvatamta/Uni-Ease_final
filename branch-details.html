@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Branch Details - UniEase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap');
+    body {
+      font-family: 'Satoshi', Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+<!-- Navbar -->
+<nav class="bg-black absolute w-full top-0 left-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="flex-1 flex items-center justify-start">
+        <a href="#">
+          <img src="assets/uniease-logo.png" alt="UniEase Logo" class="h-10 w-auto">
+        </a>
+      </div>
+      <div class="flex items-center ml-auto space-x-4">
+        <div class="hidden sm:flex space-x-4">
+          <a href="#" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">Home</a>
+          <a href="#about" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">About</a>
+          <a href="#contact" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">Contact Us</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="text" placeholder="Search..." class="p-2 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-gray-500">
+          <button class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Branch Details Page -->
+<section class="pt-24 pb-16 bg-gradient-to-t from-gray-900 to-black text-white min-h-screen">
+  <div class="text-center mt-10">
+    <!-- Dynamic Branch Name (updated by JS) -->
+    <h2 id="branch-name" class="text-5xl font-bold mb-10  tracking-wide leading-tight text-blue-400 hover:scale-105 transition-all duration-300 shadow-xl">Branch Name</h2>
+    <p id="semester" class="text-3xl mt-15 mb-12">First Semester</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 px-4">
+    <!-- Course Cards with New Styling -->
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+  </div>
+
+  <!-- Second Semester Section -->
+  <div class="text-center mt-20">
+    <p id="semester" class="text-4xl mb-12">Second Semester</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 px-4">
+    <!-- Course Cards for Second Semester -->
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+
+    <div class="bg-gray-800 text-white shadow-md rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Course Name</h3>
+      <p class="text-gray-200 mt-2">course code: | Credits: 0.0</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 py-6 text-center text-white">
+  <p>&copy; 2024 UniEase. All Rights Reserved.</p>
+  <div class="mt-4 space-x-6">
+    <a href="index.html" class="hover:text-gray-400">Home</a>
+    <a href="#" class="hover:text-gray-400">About</a>
+    <a href="#" class="hover:text-gray-400">Contact Us</a>
+  </div>
+</footer>
+
+<script>
+  // Function to get the branch name from URL query string
+  function getBranchFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('branch'); // Gets the 'branch' parameter from the URL
+  }
+
+  // Get the branch name and set it in the h2 element
+  document.addEventListener('DOMContentLoaded', function() {
+    const branchName = getBranchFromURL();
+    if (branchName) {
+      document.getElementById('branch-name').textContent = decodeURIComponent(branchName);
+    }
+  });
+</script>
+
+</body>
+</html>
