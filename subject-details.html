@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - UniEase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap');
+      body {
+        font-family: 'Satoshi', Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+<body class="bg-gray-800 text-white">
+
+<!-- Navbar -->
+<nav class="bg-black absolute w-full top-0 left-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="flex-1 flex items-center justify-start">
+        <a href="#">
+          <img src="assets/uniease-logo.png" alt="UniEase Logo" class="h-10 w-auto">
+        </a>
+      </div>
+      <div class="flex items-center ml-auto space-x-4">
+        <div class="hidden sm:flex space-x-4">
+          <a href="index.html" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">Home</a>
+          <a href="#about" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">About</a>
+          <a href="#contact" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg">Contact Us</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="text" placeholder="Search..." class="p-2 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-gray-500">
+          <button class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Course Details Page -->
+<section class="pt-24 bg-gradient-to-t from-gray-900 to-black text-white min-h-screen">
+  <div class="text-center mt-20">
+    <h2 class="text-5xl font-bold text-blue-300 hover:scale-105 transition-all duration-300 shadow-xl uppercase">Subject Name</h2>
+    <p class="text-xl mt-4 mb-16 hover:scale-105 transition-all duration-300">Course Code: xxxxxxx | Credits: 0.0</p>
+  </div>
+  
+
+
+
+  <!-- Topics Cards -->
+  <br><br>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 px-12">
+    <div class=" bg-gray-800 text-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <div class="flex items-center space-x-4">
+        <i class="fa-solid fa-clipboard text-3xl"></i>
+        <h3 class="text-lg font-semibold">Course Syllabus</h3>
+      </div>
+    </div>
+    <div class=" bg-gray-800 text-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-solid fa-book-open text-3xl"></i>
+          <h3 class="text-lg font-semibold">Previous Year Questions</h3>
+        </div>
+      </div>
+      <div class=" bg-gray-800 text-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <div class="flex items-center space-x-4">
+          <i class="fa-brands fa-youtube text-3xl"></i>
+          <h3 class="text-lg font-semibold">Youtube Links</h3>
+        </div>
+      </div>
+   
+        <div class="topic-card bg-gray-800 text-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+          <div class="flex items-center space-x-4">
+            <i class="fas fa-book text-3xl"></i>
+            <h3 class="text-lg font-semibold">Topic 1</h3>
+          </div>
+        </div>
+    <div class="topic-card bg-gray-800 text-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <div class="flex items-center space-x-4">
+        <i class="fas fa-book text-3xl"></i>
+        <h3 class="text-lg font-semibold">Topic 2</h3>
+      </div>
+    </div>
+    <div class="topic-card bg-gray-800 text-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <div class="flex items-center space-x-4">
+        <i class="fas fa-book text-3xl"></i>
+        <h3 class="text-lg font-semibold">Topic 3</h3>
+      </div>
+    </div>
+    <div class="topic-card bg-gray-800 text-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <div class="flex items-center space-x-4">
+        <i class="fas fa-book text-3xl"></i>
+        <h3 class="text-lg font-semibold">Topic 4</h3>
+      </div>
+    </div>
+    <div class="topic-card bg-gray-800 text-white p-6 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <div class="flex items-center space-x-4">
+        <i class="fas fa-book text-3xl"></i>
+        <h3 class="text-lg font-semibold">Topic 5</h3>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-gray-900 py-6 text-center text-white">
+  <p>&copy; 2024 UniEase. All Rights Reserved.</p>
+  <div class="mt-4 space-x-6">
+    <a href="index.html" class="hover:text-gray-400">Home</a>
+    <a href="#" class="hover:text-gray-400">About</a>
+    <a href="#" class="hover:text-gray-400">Contact Us</a>
+  </div>
+</footer>
+<script>
+  // Wait until the document is fully loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get the subject name from the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const subject = urlParams.get('subject');
+
+    // Set the subject name in the h2 element
+    if (subject) {
+      document.getElementById('branch-name').textContent = subject;
+    }
+  });
+</script>
+
+<script>
+  // Wait until the document is fully loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get all topic cards
+    const topicCards = document.querySelectorAll('.topic-card');
+
+    // Add a click event listener to each card
+    topicCards.forEach(card => {
+      card.addEventListener('click', function() {
+        // Get the topic name from the card
+        const topicName = this.querySelector('h3').textContent.trim().replace(/\s+/g, '');
+
+        // Redirect to topic-details.html with the topic name as a URL parameter
+        window.location.href = `topic-details.html?topic=${topicName}`;
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
