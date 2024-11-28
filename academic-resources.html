@@ -15,7 +15,6 @@
 </head>
 <body class="bg-black text-white">
 
-
 <!-- Navbar -->
 <nav class="bg-black absolute w-full top-0 left-0 z-50">
   <div class="max-w-7xl mx-auto px-6 sm:px-8">
@@ -48,7 +47,6 @@
   </div>
 </nav>
 
-
   <!-- Academic Resources Page -->
   <section class="pt-24 pb-16 bg-gradient-to-t from-gray-900 to-black text-white h-full">
     <div class="text-center mt-20">
@@ -58,7 +56,7 @@
 
     <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
       <!-- 1st Year Card -->
-      <a href="#" class="year-1 relative rounded-lg overflow-hidden bg-gray-800 p-12 hover:scale-105 transition-all duration-300">
+      <a href="#" class="year-1 relative rounded-lg overflow-hidden bg-gray-800 p-12 hover:scale-105 transition-all duration-300" onclick="setSemesters(1)">
         <div class="flex items-center justify-center mb-4">
           <i class="fas fa-clipboard-check text-4xl text-yellow-400"></i>
         </div>
@@ -66,7 +64,7 @@
       </a>
 
       <!-- 2nd Year Card -->
-      <a href="#" class="year-2 relative rounded-lg overflow-hidden bg-gray-800 p-12 hover:scale-105 transition-all duration-300">
+      <a href="#" class="year-2 relative rounded-lg overflow-hidden bg-gray-800 p-12 hover:scale-105 transition-all duration-300" onclick="setSemesters(2)">
         <div class="flex items-center justify-center mb-4">
           <i class="fas fa-book-open text-4xl text-blue-400"></i>
         </div>
@@ -74,7 +72,7 @@
       </a>
 
       <!-- 3rd Year Card -->
-      <a href="#" class="year-3 relative rounded-lg overflow-hidden bg-gray-800 p-12 hover:scale-105 transition-all duration-300">
+      <a href="#" class="year-3 relative rounded-lg overflow-hidden bg-gray-800 p-12 hover:scale-105 transition-all duration-300" onclick="setSemesters(3)">
         <div class="flex items-center justify-center mb-4">
           <i class="fas fa-cogs text-4xl text-green-400"></i>
         </div>
@@ -82,7 +80,7 @@
       </a>
 
       <!-- 4th Year Card -->
-      <a href="#" class="year-4 relative rounded-lg overflow-hidden bg-gray-800 p-8 hover:scale-105 transition-all duration-300">
+      <a href="#" class="year-4 relative rounded-lg overflow-hidden bg-gray-800 p-8 hover:scale-105 transition-all duration-300" onclick="setSemesters(4)">
         <div class="flex items-center justify-center mb-4">
           <i class="fas fa-graduation-cap text-4xl text-red-400"></i>
         </div>
@@ -98,8 +96,29 @@
     <a href="#contact" class="hover:text-gray-400">Contact Us</a>
   </div>
 </footer>
+    <script>
+      function setSemesters(year) {
+        let semesters;
+        switch (year) {
+          case 1:
+            semesters = ['First Semester', 'Second Semester'];
+            break;
+          case 2:
+            semesters = ['Third Semester', 'Fourth Semester'];
+            break;
+          case 3:
+            semesters = ['Fifth Semester', 'Sixth Semester'];
+            break;
+          case 4:
+            semesters = ['Seventh Semester', 'Eighth Semester'];
+            break;
+          default:
+            semesters = [];
+        }
+        localStorage.setItem('semesters', JSON.stringify(semesters));
+        window.location.href = 'branch-details.html';
+      }
+    </script>
     <script src="script.js"></script>
-  
-    
 </body>
 </html>
