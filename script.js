@@ -12,26 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-
-
-  document.addEventListener("DOMContentLoaded", function() {
-    // Select the About link using its unique selector or attribute
-    const aboutLink = document.querySelector("a[href='#about']");
-  
-    // Add a click event listener to the About link
-    if (aboutLink) {
-      aboutLink.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default action (scrolling behavior)
-        window.location.href = "about.html"; // Redirect to about.html
-      });
-    }
-  });
-  
-
-
-
-
-
   // Add click event listener for the Campus Tools card
   if (campusToolsCard) {
     campusToolsCard.addEventListener('click', function() {
@@ -55,4 +35,14 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = 'selectbranch.html';
     });
   });
+
+  // Add click event listener for the "About" link on index.html
+  const aboutLink = document.querySelector("a[href='#about']");
+  
+  if (aboutLink) {
+    aboutLink.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default scroll behavior
+      window.location.href = 'about.html'; // Redirect to about.html
+    });
+  }
 });
