@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add click event listener for the Internship card
   if (internshipCard) {
     internshipCard.addEventListener('click', function() {
-      window.location.href = 'comingsoon.html';
+      window.location.href = 'https://docs.google.com/spreadsheets/d/18ne2DeaNh9ZyXWkFOX8gbWSO2oJWvEf2dbsoaXlHFiI/edit?gid=0#gid=0';
     });
   }
 
