@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA Calculator - UniEase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap');
+    body {
+      font-family: 'Satoshi', Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+<!-- Navbar -->
+<nav class="bg-black absolute w-full top-0 left-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="flex-1 flex items-center justify-start">
+        <a href="index.html">
+          <img src="assets/uniease-logo.png" alt="UniEase Logo" class="h-10 w-auto">
+        </a>
+      </div>
+      <div class="flex items-center ml-auto space-x-4">
+        <div class="hidden sm:flex space-x-4">
+          <a href="index.html" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg"><b>Home</b></a>
+          <a href="#about" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg"><b>About</b></a>
+          <a href="#contact" class="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-lg"><b>Contact Us</b></a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="text" id="global-search-bar" placeholder="Search..." class="p-2 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-gray-500">
+          <button id="global-search-button" class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+            <b>Search</b>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- GPA Calculator Page -->
+<section class="pt-24 pb-16 bg-gradient-to-t from-gray-900 to-black text-white min-h-screen">
+  <div class="text-center mt-10">
+    <h2 class="text-5xl font-bold mb-10 tracking-wide leading-tight text-blue-400 hover:scale-105 transition-all duration-300 shadow-xl">GPA Calculator</h2>
+    <p class="text-3xl mt-15 mb-12">Calculate your GPA with ease</p>
+  </div>
+
+  <div class="gpa__choice flex justify-center mb-12 space-x-10">
+    <div class="gpa__choice--first bg-gray-800 text-white shadow-md rounded-lg p-6 text-center cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">First Year</h3>
+    </div>
+    <div class="gpa__choice--second bg-gray-800 text-white shadow-md rounded-lg p-6 text-center cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="text-lg font-semibold">Second Year</h3>
+    </div>
+  </div>
+
+  <div class="gpa__first-year mx-auto max-w-4xl">
+    <table id="gpa__table--first" class="w-full text-center gpa__table--first">
+      <thead>
+        <tr class="gpa__table--head bg-gray-800">
+          <th class="p-4 text-lg font-semibold">S.No.</th>
+          <th class="p-4 text-lg font-semibold">Subjects</th>
+          <th class="p-4 text-lg font-semibold">Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-4">1</td>
+          <td>
+            <select name="subject" id="gpa__subject--first-1" class="w-full p-2 rounded-md subject-select">
+              <option value="0" disabled selected>Select Subject</option>
+              <option value="4.5">Applied Chemistry</option>
+              <option value="4.5">Applied Physics</option>
+              <option value="4">Computer Science 1</option>
+              <option value="4">Computer Science 2</option>
+              <option value="4.5">Electrical</option>
+              <option value="4.5">Electronics</option>
+              <option value="4">Engineering Drawing 1</option>
+              <option value="5">Engineering Drawing 2</option>
+              <option value="3">Environment</option>
+              <option value="3.5">Mathematics 1</option>
+              <option value="3.5">Mathematics 2</option>
+              <option value="2.5">Mechanics</option>
+              <option value="3">Professional Communication</option>
+            </select>
+          </td>
+          <td>
+            <select name="grade" id="gpa__grade--first-1" class="w-full p-2 rounded-md">
+              <option value="0" disabled selected>Grade</option>
+              <option value="10">A+</option>
+              <option value="10">A</option>
+              <option value="9">A-</option>
+              <option value="8">B</option>
+              <option value="7">B-</option>
+              <option value="6">C</option>
+              <option value="5">C-</option>
+              <option value="0">F</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="text-center mt-4">
+      <button id="add-row-button" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-500">
+        + Add Subject
+      </button>
+    </div>
+    <div class="text-center mt-6">
+      <button id="calculate-gpa-button" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-gray-500">
+        Calculate GPA
+      </button>
+      <p id="gpa-result" class="text-3xl mt-4"></p>
+    </div>
+
+    <!-- Added Preview Table -->
+    <div class="text-center mt-12">
+      <h3 class="text-2xl font-semibold">Preview of Selected Subjects</h3>
+      <table id="selected-preview-table" class="w-full mt-6 bg-gray-800 text-white rounded-lg">
+        <thead>
+          <tr class="text-lg bg-gray-700">
+            <th class="p-4">S.No.</th>
+            <th class="p-4">Subjects</th>
+            <th class="p-4">Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Preview rows will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-900 py-6 text-center text-white">
+  <p>&copy; 2024 UniEase. All Rights Reserved.</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const tableBody = document.querySelector('#gpa__table--first tbody');
+    const previewTableBody = document.querySelector('#selected-preview-table tbody');
+
+    function updatePreviewTable() {
+      previewTableBody.innerHTML = '';
+      const rows = tableBody.querySelectorAll('tr');
+      rows.forEach((row, index) => {
+        const subjectSelect = row.querySelector('[id^="gpa__subject--first-"]');
+        const gradeSelect = row.querySelector('[id^="gpa__grade--first-"]');
+        const selectedSubject = subjectSelect.options[subjectSelect.selectedIndex]?.text || '';
+        const selectedGrade = gradeSelect.options[gradeSelect.selectedIndex]?.text || '';
+        if (selectedSubject && selectedGrade) {
+          const previewRow = document.createElement('tr');
+          previewRow.innerHTML = `
+            <td class="p-4">${index + 1}</td>
+            <td class="p-4">${selectedSubject}</td>
+            <td class="p-4">${selectedGrade}</td>
+          `;
+          previewTableBody.appendChild(previewRow);
+        }
+      });
+    }
+
+    document.addEventListener('change', function(event) {
+      if (event.target.matches('[id^="gpa__subject--first-"], [id^="gpa__grade--first-"]')) {
+        updatePreviewTable();
+      }
+    });
+
+    document.getElementById('add-row-button').addEventListener('click', function() {
+      updatePreviewTable();
+    });
+  });
+</script>
+</body>
+</html>

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add click event listener for the Campus Tools card
   if (campusToolsCard) {
     campusToolsCard.addEventListener('click', function() {
-      window.location.href = 'comingsoon.html';
+      window.location.href = 'campustools.html';
     });
   }
 
