@@ -141,38 +141,48 @@
 </footer>
 
 <script>
-  // Function to get the branch name from URL query string
-  function getBranchFromURL() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('branch'); // Gets the 'branch' parameter from the URL
-  }
-
-  // Get the branch name and set it in the h2 element
-  document.addEventListener('DOMContentLoaded', function() {
-    const branchName = getBranchFromURL();
-    if (branchName) {
-      document.getElementById('branch-name').textContent = decodeURIComponent(branchName);
+    // Function to get the branch name from URL query string
+    function getBranchFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('branch'); // Gets the 'branch' parameter from the URL
     }
-  });
-</script>
-<script>
-  // Wait until the document is fully loaded
-  document.addEventListener("DOMContentLoaded", function() {
-    // Get all the cards by their class name (or any other method you prefer)
-    const cards = document.querySelectorAll('.branch-card');
-    
-    // Loop through all the cards and add an event listener for the click event
-    cards.forEach(card => {
-      card.addEventListener('click', function() {
-        // You can get the specific subject from the card's data attribute or inner text
-        // For example, using the card's ID or text:
-        const subjectName = this.querySelector('h3').innerText; // Get the subject name
-
-        // Redirect to the subject details page
-        window.location.href = 'topic-details.html?subject=' + encodeURIComponent(subjectName);
+  
+    // Get the branch name and set it in the h2 element
+    document.addEventListener('DOMContentLoaded', function() {
+      const branchName = getBranchFromURL();
+      if (branchName) {
+        document.getElementById('branch-name').textContent = decodeURIComponent(branchName);
+      }
+    });
+  
+    document.addEventListener("DOMContentLoaded", function() {
+      const cards = document.querySelectorAll('.branch-card');
+      
+      cards.forEach(card => {
+        card.addEventListener('click', function() {
+          const subjectName = this.querySelector('h3').innerText;
+  
+          // Map subject names to specific HTML pages
+          const subjectPages = {
+            "Software Engineering": "software-engineering.html",
+            "Machine learning": "machine-learning.html",
+            "Computer Architecture & Organization": "computer-architecture.html",
+            "Probability and Statistics": "probability-statistics.html",
+            "Network Programming": "network-programming.html",
+            "Generic Elective": "generic-elective.html",
+            "Professional Elective": "professional-elective.html"
+          };
+  
+          // Redirect to the corresponding page if it exists
+          if (subjectPages[subjectName]) {
+            window.location.href = subjectPages[subjectName];
+          } else {
+            console.error("Page not found for subject: " + subjectName);
+          }
+        });
       });
     });
-  });
-</script>
-</body>
-</html>
+  </script>
+  </body>
+  </html>
+  
